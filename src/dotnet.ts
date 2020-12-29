@@ -50,7 +50,6 @@ export class Dotnet {
       Executor.runInTerminal(
         `dotnet add '${projectFilePath}' reference '${fileUri.fsPath}'`
       );
-      Executor.runInTerminal(`dotnet build '${projectFilePath}'`);
     }
   }
 }
