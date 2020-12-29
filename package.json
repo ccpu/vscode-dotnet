@@ -128,7 +128,7 @@
 				},
 				"dotnet.unitTestTemplateName": {
 					"type": "string",
-					"default": "wb-xunit",
+					"default": "xunit",
 					"description": "Whether to enable anonymous usage collection."
 				}
 			}
