@@ -30,22 +30,32 @@
 	"activationEvents": [
 		"onCommand:dotnet.build",
 		"onCommand:dotnet.run",
-		"onCommand:dotnet.test"
+		"onCommand:dotnet.clean",
+		"onCommand:dotnet.test",
+		"onCommand:dotnet.createUnitTests"
 	],
 	"main": "./out/extension",
 	"contributes": {
 		"commands": [
 			{
 				"command": "dotnet.build",
-				"title": "Build .NET Core project"
+				"title": ".NET Build project"
 			},
 			{
 				"command": "dotnet.run",
-				"title": "Run .NET Core project"
+				"title": ".NET Run project"
 			},
 			{
 				"command": "dotnet.test",
-				"title": "Execute .NET Core tests"
+				"title": ".NET Execute tests"
+			},
+			{
+				"command": "dotnet.clean",
+				"title": ".NET Clean Project"
+			},
+			{
+				"command": "dotnet.createUnitTests",
+				"title": ".NET Create Unit Test"
 			}
 		],
 		"menus": {
@@ -66,6 +76,16 @@
 					"group": "navigation@3"
 				},
 				{
+					"when": "resourceExtname == .csproj",
+					"command": "dotnet.clean",
+					"group": "navigation@4"
+				},
+				{
+					"when": "resourceExtname == .csproj",
+					"command": "dotnet.createUnitTests",
+					"group": "navigation@5"
+				},
+				{
 					"when": "resourceExtname == .fsproj",
 					"command": "dotnet.build",
 					"group": "navigation@1"
@@ -81,6 +101,16 @@
 					"group": "navigation@3"
 				},
 				{
+					"when": "resourceExtname == .fsproj",
+					"command": "dotnet.clean",
+					"group": "navigation@4"
+				},
+				{
+					"when": "resourceExtname == .fsproj",
+					"command": "dotnet.createUnitTests",
+					"group": "navigation@5"
+				},
+				{
 					"when": "resourceExtname == .sln",
 					"command": "dotnet.build",
 					"group": "navigation@1"
@@ -94,6 +124,11 @@
 				"dotnet.enableTelemetry": {
 					"type": "boolean",
 					"default": false,
+					"description": "Whether to enable anonymous usage collection."
+				},
+				"dotnet.unitTestTemplateName": {
+					"type": "string",
+					"default": "wb-xunit",
 					"description": "Whether to enable anonymous usage collection."
 				}
 			}
