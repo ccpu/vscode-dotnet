@@ -59,61 +59,118 @@
 			}
 		],
 		"menus": {
-			"explorer/context": [
+			"editor/context": [
 				{
-					"when": "resourceExtname == .csproj",
+					"when": "resourceExtname == .csproj || resourceExtname == .cs",
 					"command": "dotnet.build",
-					"group": "navigation@1"
+					"group": "1_navigation@1"
 				},
 				{
 					"when": "resourceExtname == .csproj",
 					"command": "dotnet.run",
-					"group": "navigation@2"
+					"group": "1_navigation@2"
 				},
 				{
 					"when": "resourceExtname == .csproj",
 					"command": "dotnet.test",
-					"group": "navigation@3"
+					"group": "1_navigation@3"
 				},
 				{
-					"when": "resourceExtname == .csproj",
+					"when": "resourceExtname == .csproj || resourceExtname == .cs",
 					"command": "dotnet.clean",
-					"group": "navigation@4"
+					"group": "1_navigation@4"
 				},
 				{
 					"when": "resourceExtname == .csproj",
 					"command": "dotnet.createUnitTests",
-					"group": "navigation@5"
+					"group": "1_navigation@5"
 				},
 				{
-					"when": "resourceExtname == .fsproj",
+					"when": "resourceExtname == .fsproj || resourceExtname == .fs",
 					"command": "dotnet.build",
-					"group": "navigation@1"
+					"group": "1_navigation@1"
 				},
 				{
-					"when": "resourceExtname == .fsproj",
+					"when": "resourceExtname == .fsproj || resourceExtname == .fs",
 					"command": "dotnet.run",
-					"group": "navigation@2"
+					"group": "1_navigation@2"
 				},
 				{
 					"when": "resourceExtname == .fsproj",
 					"command": "dotnet.test",
-					"group": "navigation@3"
+					"group": "1_navigation@3"
 				},
 				{
-					"when": "resourceExtname == .fsproj",
+					"when": "resourceExtname == .fsproj || resourceExtname == .fs",
 					"command": "dotnet.clean",
-					"group": "navigation@4"
+					"group": "1_navigation@4"
 				},
 				{
 					"when": "resourceExtname == .fsproj",
 					"command": "dotnet.createUnitTests",
-					"group": "navigation@5"
+					"group": "1_navigation@5"
 				},
 				{
 					"when": "resourceExtname == .sln",
 					"command": "dotnet.build",
-					"group": "navigation@1"
+					"group": "1_navigation@1"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourceExtname == .csproj || resourceExtname == .cs",
+					"command": "dotnet.build",
+					"group": "1_navigation@1"
+				},
+				{
+					"when": "resourceExtname == .csproj",
+					"command": "dotnet.run",
+					"group": "1_navigation@2"
+				},
+				{
+					"when": "resourceExtname == .csproj",
+					"command": "dotnet.test",
+					"group": "1_navigation@3"
+				},
+				{
+					"when": "resourceExtname == .csproj || resourceExtname == .cs",
+					"command": "dotnet.clean",
+					"group": "1_navigation@4"
+				},
+				{
+					"when": "resourceExtname == .csproj",
+					"command": "dotnet.createUnitTests",
+					"group": "1_navigation@5"
+				},
+				{
+					"when": "resourceExtname == .fsproj || resourceExtname == .fs",
+					"command": "dotnet.build",
+					"group": "1_navigation@1"
+				},
+				{
+					"when": "resourceExtname == .fsproj || resourceExtname == .fs",
+					"command": "dotnet.run",
+					"group": "1_navigation@2"
+				},
+				{
+					"when": "resourceExtname == .fsproj",
+					"command": "dotnet.test",
+					"group": "1_navigation@3"
+				},
+				{
+					"when": "resourceExtname == .fsproj || resourceExtname == .fs",
+					"command": "dotnet.clean",
+					"group": "1_navigation@4"
+				},
+				{
+					"when": "resourceExtname == .fsproj",
+					"command": "dotnet.createUnitTests",
+					"group": "1_navigation@5"
+				},
+				{
+					"when": "resourceExtname == .sln",
+					"command": "dotnet.build",
+					"group": "1_navigation@1"
 				}
 			]
 		},
